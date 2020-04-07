@@ -14,7 +14,7 @@ class Ingredient
     end
 
     def users
-        allergens = Allergy.all do |allergy|
+        allergens = Allergy.all.select do |allergy|
             allergy.ingredient == self
         end
         allergens.map { |allergy| allergy.user }.uniq
