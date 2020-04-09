@@ -1,0 +1,12 @@
+C - CREATE
+    - write new data to our database
+    (e.g CREATE TABLE, inserting rows, adding columns)
+R - READ
+    - reveals, shows us the data in our database, access our data
+    (e.g SELECT, GROUP BY, ORDER BY)
+U - UPDATE
+    - edits or changes existing data
+    (e.g ALTER TABLE, CHANGE COLUMN, UPDATE)
+D - DESTROY
+    - deletes data, erases data from our database.... PERMANENTLY
+    (e.g DROP TABLE, DESTROY)
