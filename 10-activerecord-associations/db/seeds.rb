@@ -11,3 +11,9 @@ t2 = Tweet.create(message: 'I live in the moment.. 😂', user_id: u1.id)
 t3 = Tweet.create(message: 'Eat more 🐥', user_id: u2.id)
 t4 = Tweet.create(message: 'This is my first tweet suckers!!!!!', user_id: u4.id)
 t5 = Tweet.create(message: 'NEED... COFFEEE.. ☕️🥱', user_id: u1.id)
+
+l1 = Like.create(user_id: u2.id, tweet_id: t4.id)
+l2 = Like.create(user_id: u4.id, tweet_id: t2.id)
+l3 = Like.create(user_id: u1.id, tweet_id: t3.id)
+
+binding.pry

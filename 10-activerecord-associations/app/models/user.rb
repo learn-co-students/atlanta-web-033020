@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
+  has_many :likes
   has_many :tweets
-  # def tweets
-  #   @tweets = Tweet.all.select { |t| t.user_id == self.id }
-  # end
+  # has_many :liked_tweets, through: :likes
+
+  def liked_tweets
+    @tweets = self.likes.map { |like| like.tweet }
+  end
 
 end
