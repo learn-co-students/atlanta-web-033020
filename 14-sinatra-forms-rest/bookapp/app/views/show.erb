@@ -1,0 +1,11 @@
+<% if @book %>
+  <h1> Book: <%= @book.title %> </h1>
+
+  <ul>
+      <li> <%= @book.desc %> </li>
+      <li> <%= @book.author.name %> </li>
+  </ul>
+
+<% else %>
+  <h1> ER </h1>
+<% end %>
