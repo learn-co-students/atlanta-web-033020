@@ -1,0 +1,17 @@
+<h1>Create a new book</h1>
+
+<form action="/books" method="post">
+
+  Title: <input type="text" name="book[title]" value="">
+  Desc: <input type="text" name="book[desc]" value="">
+
+  Author:
+  <select name="book[author_id]">
+    <% @authors.each do |author| %>
+      <option value="<%= author.id %>"><%= author.name %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" name="" value="Create Book">
+
+</form>

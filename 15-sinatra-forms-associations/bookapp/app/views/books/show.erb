@@ -1,0 +1,20 @@
+<% if @book %>
+  <h1> Book: <%= @book.title %> </h1>
+
+  <ul>
+      <li> <%= @book.desc %> </li>
+      <a href="/authors/<%= @book.author.id %>">
+        <li><%= @book.author.name %> </li>
+      </a>
+  </ul>
+
+  <form action="/books/<%=@book.id%>/delete" method="post">
+
+    <input type="hidden" value="delete" name="_method">
+
+    <input type="submit" name="" value="Delete Book">
+  </form>
+
+<% else %>
+  <h1> ER </h1>
+<% end %>
