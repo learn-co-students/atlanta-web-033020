@@ -1,0 +1,36 @@
+<h1>Create new book</h1>
+
+<%= form_with model: @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :desc %>
+  <%= f.text_field :desc %>
+
+  <%= f.label :author_id %>
+  <%= f.collection_select :author_id, Author.all, :id, :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- <%= form_for @book, method: :post do |f| %>
+
+  Title: <%= f.text_field :title %><br />
+  Desc: <%= f.text_field :desc %><br />
+  Author: <%= f.text_field :author_id %><br />
+
+  <%= f.submit %>
+<% end %> -->
+
+
+<!-- <%= form_tag '/books', method: :post do %>
+
+  Title: <%= text_field_tag :'book[title]' %>
+  Desc: <%= text_field_tag :'book[desc]' %>
+  Author: <%= text_field_tag :'book[author_id]' %>
+
+  <%= collection_select :book, :author_id, Author.all, :id, :name %>
+
+  <%= submit_tag %>
+
+<% end %> -->

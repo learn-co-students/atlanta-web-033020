@@ -1,0 +1,9 @@
+<h1> <%= @book.title %> </h1>
+
+<h4>
+  Author: <%= @book.author.name %>
+</h4>
+
+<%= button_to "Delete", book_path(@book), :method => :delete %>
+<%= link_to "Edit", edit_book_path(@book), :method => :get %>
+<%= button_to "Back to Home", books_path, :method => :get %>
