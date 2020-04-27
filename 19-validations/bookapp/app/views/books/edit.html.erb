@@ -1,0 +1,16 @@
+<h1>This is edit page</h1>
+
+<%= form_with model:@book do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :desc %>
+  <%= f.text_field :desc %>
+
+  <%= f.label :author_id %>
+  <%= f.collection_select :author_id, Author.all, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>
