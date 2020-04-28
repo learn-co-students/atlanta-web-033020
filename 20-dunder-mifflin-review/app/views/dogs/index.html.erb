@@ -1,0 +1,11 @@
+<h2 align='center'><b><u>
+    All the Super Cute & Adorable Dogs
+</u></b></h2>
+<br>
+<ul>
+    <% @dogs.each do |dog| %>
+        <li>
+            <%= link_to dog.name, dog %>
+        </li>
+    <% end %>
+</ul>

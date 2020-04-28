@@ -1,0 +1,40 @@
+<% if !@employee.errors.empty? %>
+    Here are the errors we ran into:
+    <ul>
+        <% @employee.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @employee do |f| %>
+    <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+    </p>
+    <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+    </p>
+    <p>
+        <%= f.label :alias %>
+        <%= f.text_field :alias %>
+    </p>
+    <p>
+        <%= f.label :office %>
+        <%= f.text_field :office %>
+    </p>
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :img_url, "Image URL:" %>
+        <%= f.text_field :img_url %>
+    </p>
+    <%= f.label 'Pick a cute loveable dog:' %>
+    <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+    <br>
+    <br>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<h2><u><b>
+    <%= @employee.name %>'s Information
+</b></u></h2>
+<br>
+<%= image_tag @employee.img_url, height: 232 %>
+<br>
+<p>
+    Alias: <%= @employee.alias %>
+</p>
+<p>
+    Office: <%= @employee.office %>
+</p>
+<p>
+    Dog they have chosen: <%= link_to @employee.dog.name, @employee.dog %>
+</p>
+<br>
+<%= link_to 'Edit Profile', edit_employee_path(@employee) %>

@@ -1,0 +1,13 @@
+<h2 align='center'><b><u>
+    List of all Employees
+</u></b></h2>
+<br>
+<ul>
+    <% @employees.each do |employee| %>
+        <li>
+            <%= link_to employee.name, employee %>
+        </li>
+    <% end %>
+</ul>
+<br>
+<%= link_to 'Create New Record', new_employee_path %>
