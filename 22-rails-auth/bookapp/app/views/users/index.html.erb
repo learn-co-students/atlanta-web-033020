@@ -1,0 +1,18 @@
+<% if flash[:message] %>
+    <h4 style="color: red;">
+      Alert: <%= flash[:message] %>
+    </h4>
+<% end %>
+
+<h1>List of all the Users</h1>
+
+<% @users.each do |user| %>
+
+  <!-- <a href=<%= "/users/#{user.id}" %>>
+    <li>
+      <%= user.name %>
+    </li>
+  </a> -->
+
+  <li> <%= link_to user.name, user_path(user), :method => :get %> </li>
+<% end %>

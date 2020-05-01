@@ -1,0 +1,18 @@
+<% if flash[:success] %>
+    <h4 style="color: red;">
+      <%= flash[:success] %>
+    </h4>
+<% end %>
+
+<h1> <%= @user.username %> </h1>
+
+<% @user.books.each do |book| %>
+  <li>
+    <%= link_to book.title, book_path(book), :method => :get %>
+  </li>
+<% end %>
+
+<%= button_to "Delete", user_path(@user), :method => :delete %>
+<%= link_to "Edit", edit_user_path(@user), :method => :get %>
+
+<%= button_to "Back to users", users_path, :method => :get %>
